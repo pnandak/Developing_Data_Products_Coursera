@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>R - Regression modelling of mtcars data set</title>
+  <meta charset="utf-8">
+  <meta name="description" content="R - Regression modelling of mtcars data set">
+  <meta name="author" content="Prasanna Nandakumar">
+  <meta name="generator" content="slidify" />
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta http-equiv="X-UA-Compatible" content="chrome=1">
+  <link rel="stylesheet" href="libraries/frameworks/io2012/css/default.css" media="all" >
+  <link rel="stylesheet" href="libraries/frameworks/io2012/css/phone.css" 
+    media="only screen and (max-device-width: 480px)" >
+  <link rel="stylesheet" href="libraries/frameworks/io2012/css/slidify.css" >
+  <link rel="stylesheet" href="libraries/highlighters/highlight.js/css/tomorrow.css" />
+  <base target="_blank"> <!-- This amazingness opens all links in a new tab. -->  <link rel=stylesheet href="./assets/css/ribbons.css"></link>
+
+  
+  <!-- Grab CDN jQuery, fall back to local if offline -->
+  <script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.7.min.js"></script>
+  <script>window.jQuery || document.write('<script src="libraries/widgets/quiz/js/jquery.js"><\/script>')</script> 
+  <script data-main="libraries/frameworks/io2012/js/slides" 
+    src="libraries/frameworks/io2012/js/require-1.0.8.min.js">
+  </script>
+  
+  
+
+</head>
+<body style="opacity: 0">
+  <slides class="layout-widescreen">
+    
+    <!-- LOGO SLIDE -->
+        <slide class="title-slide segue nobackground">
+  <hgroup class="auto-fadein">
+    <h1>R - Regression modelling of mtcars data set</h1>
+    <h2>Web application to visualise and sum up important model</h2>
+    <p>Prasanna Nandakumar<br/>Data Scientist</p>
+  </hgroup>
+  <article></article>  
+</slide>
+    
+
+    <!-- SLIDES -->
+    <slide class="class" id="id" style="background:;">
+  <hgroup>
+    <h2>Goal</h2>
+  </hgroup>
+  <article data-timings="">
+    <p>Wouldnt&#39;t it be great to</p>
+
+<pre><code>1. Create on the fly different linear models for the mtcars data set in R?
+
+2. Be able to visualize most importnat chracteristic about created mtcars linear model?
+
+3. View some plot&#39;s that visualise the goodness of the build model?
+</code></pre>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="class" id="id" style="background:;">
+  <hgroup>
+    <h2>Place to do it</h2>
+  </hgroup>
+  <article data-timings="">
+    <p>You can do it at <a href="https://prasanna.shinyapps.io/Developing_Data_Products/">https://prasanna.shinyapps.io/Developing_Data_Products/</a></p>
+
+<p>Choose
+1. whatever variable you want as th regressed one (Miles/(US) gallon (mpg)?), and
+2. one or more as the regressors (Weight? Number of cylinders (cyl) and Gross horsepower?)</p>
+
+<p>data(mtcars)</p>
+
+<p>head(mtcars)</p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="class" id="id" style="background:;">
+  <hgroup>
+    <h2>mtcars Characteristics</h2>
+  </hgroup>
+  <article data-timings="">
+    <p>You can check then the following characteristic:</p>
+
+<pre><code>- General Summary produced by R
+
+- If residuals are uncorelated to model variables
+
+- If mean of residuals is near 0
+
+- Shapiro Test: are model residuals normal distrbuted?
+</code></pre>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="class" id="id" style="background:;">
+  <hgroup>
+    <h2>mtcars diagnostic plots</h2>
+  </hgroup>
+  <article data-timings="">
+    <p>You have visualized 4 diagnostic plots:</p>
+
+<ul>
+<li><p>&#39;Residulas vs Fitted&#39;, a plot of residuals values against fitted values (should not follow any pattern)</p></li>
+<li><p>&#39;Normal Q-Q&#39;that checks if the residuals follow a Normal Distribution</p></li>
+<li><p>&#39;Scale-Location&#39; plot, also called &#39;Spread-Location&#39; is similar to the residuals versus fitted values plot.
+But it uses the square root of the standardized residuals. Like the first plot, there should be no discernable pattern to the plot.</p></li>
+<li><p>&#39;Cook&#39;s distance&#39; is a statistic that tries to identify points which have more influence than other points. Generally these are points that are distant from other points in the data, either for the dependent variable or one or more independent variables.</p></li>
+</ul>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+    <slide class="backdrop"></slide>
+  </slides>
+  <div class="pagination pagination-small" id='io2012-ptoc' style="display:none;">
+    <ul>
+      <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=1 title='Goal'>
+         1
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=2 title='Place to do it'>
+         2
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=3 title='mtcars Characteristics'>
+         3
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=4 title='mtcars diagnostic plots'>
+         4
+      </a>
+    </li>
+  </ul>
+  </div>  <!--[if IE]>
+    <script 
+      src="http://ajax.googleapis.com/ajax/libs/chrome-frame/1/CFInstall.min.js">  
+    </script>
+    <script>CFInstall.check({mode: 'overlay'});</script>
+  <![endif]-->
+</body>
+  <!-- Load Javascripts for Widgets -->
+  
+  <!-- LOAD HIGHLIGHTER JS FILES -->
+  <script src="libraries/highlighters/highlight.js/highlight.pack.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script>
+  <!-- DONE LOADING HIGHLIGHTER JS FILES -->
+   
+  </html>

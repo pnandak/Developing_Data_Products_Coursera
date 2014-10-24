@@ -1,0 +1,75 @@
+---
+title       : R - Regression modelling of mtcars data set
+subtitle    : Web application to visualise and sum up important model 
+author      : Prasanna Nandakumar
+job         : Data Scientist
+framework   : io2012        # {io2012, html5slides, shower, dzslides, ...}
+highlighter : highlight.js  # {highlight.js, prettify, highlight}
+hitheme     : tomorrow      # 
+widgets     : []            # {mathjax, quiz, bootstrap}
+mode        : selfcontained # {standalone, draft}
+knit        : slidify::knit2slides
+
+--- .class #id 
+
+## Goal
+
+Wouldnt't it be great to
+
+    1. Create on the fly different linear models for the mtcars data set in R?
+
+    2. Be able to visualize most importnat chracteristic about created mtcars linear model?
+
+    3. View some plot's that visualise the goodness of the build model?
+
+
+--- .class #id 
+
+## Place to do it
+
+You can do it at https://prasanna.shinyapps.io/Developing_Data_Products/
+
+Choose
+1. whatever variable you want as th regressed one (Miles/(US) gallon (mpg)?), and
+2. one or more as the regressors (Weight? Number of cylinders (cyl) and Gross horsepower?)
+
+data(mtcars)
+
+head(mtcars)
+
+--- .class #id 
+
+## mtcars Characteristics
+
+You can check then the following characteristic:
+
+    - General Summary produced by R
+
+    - If residuals are uncorelated to model variables
+
+    - If mean of residuals is near 0
+
+    - Shapiro Test: are model residuals normal distrbuted?
+
+--- .class #id 
+
+## mtcars diagnostic plots
+
+You have visualized 4 diagnostic plots:
+
+- 'Residulas vs Fitted', a plot of residuals values against fitted values (should not follow any pattern)
+
+- 'Normal Q-Q'that checks if the residuals follow a Normal Distribution
+
+- 'Scale-Location' plot, also called 'Spread-Location' is similar to the residuals versus fitted values plot.
+But it uses the square root of the standardized residuals. Like the first plot, there should be no discernable pattern to the plot.
+
+- 'Cook's distance' is a statistic that tries to identify points which have more influence than other points. Generally these are points that are distant from other points in the data, either for the dependent variable or one or more independent variables.
+
+
+
+  
+
+
+
+
